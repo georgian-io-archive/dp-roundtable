@@ -12,7 +12,7 @@ class FlagSettings:
         self.batch_size = 600 # The training batch size.
         self.batches_per_lot = 1 # Number of batches per lot.
         # Together, batch_size and batches_per_lot determine lot_size.
-        self.num_training_steps = 150 # The number of training steps. This counts number of lots.
+        self.num_training_steps = 100 # The number of training steps. This counts number of lots.
 
         self.randomize = True # If true, randomize the input data; otherwise use a fixed seed and non-randomized input.
         self.freeze_bottom_layers = False # If true, only train on the logit layer.
@@ -22,8 +22,8 @@ class FlagSettings:
         # For searching parameters
         self.projection_dimensions = 0 # PCA projection dimensions, or 0 for no projection.
         self.num_hidden_layers = 1 # Number of hidden layers in the network
-        self.hidden_layer_num_units = 10 # Number of units per hidden layer
-        self.default_gradient_l2norm_bound = 4.0 # norm clipping
+        self.hidden_layer_num_units = 35 # Number of units per hidden layer
+        self.default_gradient_l2norm_bound = 3.0 # norm clipping
         self.num_conv_layers = 0 # Number of convolutional layers to use.
 
         self.data_dir = "/tmp/mnist/"
